@@ -1,6 +1,12 @@
 # Silute
 基于Loader的MVP开发库
 
+## 依赖
+
+```
+compile 'com.skylinetan.silute:silute:1.0.0'
+```
+
 由于在`Configuration Changes`的时候，`Activity`会遭遇重启，这时候`Presenter`不应该被销毁，如果
 `Presenter`受到`Activity`的生命周期控制，由于之前的`Activity`已经不存在，`Presenter`也就相应的不存在了。
 保存`Presenter`实例，使用`Loader`是一种思路，`Silute`的特点如下
@@ -17,7 +23,7 @@
 * `Presenter`拥有`Activity`的生命周期的方法，可以在`Activity`对应的生命周期内做相应的操作
 * `BaseActivity`里面的`Presenter`有关的方法是选择性的，一些简单的页面不需要使用`MVP`的时候，不用重写
 
-##使用方法
+## 使用方法
 
 推荐的使用方法
 
