@@ -25,7 +25,7 @@
 
 2.`Activity`继承自抽象类`SilBaseActivity`，`Fragment`继承自`SilBaseFragment`，其中选择性重写的方法有：
 
-* createPresenterFactory：Presenter的工厂类，返回一个BasePresenterFactory实例
-* getLoaderId：返回Loader的id，一个id对应一个Loader
+* createPresenterFactory：`Presenter`的工厂类，返回一个`BasePresenterFactory`实例
+* getLoaderId：返回`Loader`的`id`，一个`id`对应一个`Loader`
 
 3.`Presenter`继承`BasePresenter`实现`Presenter`层接口，`Activity`实现`View`层接口，`BasePresenter`和`factory`里面保存的是`Activity`的弱引用
