@@ -11,6 +11,7 @@
 如果需要恢复大量的数据，Configuration Changes的时候是有必要使Activity重启的，这时候可以使用setRetainInstance(true)的Fragment
 来保存大量的不会造成内存泄漏的数据。其中调用了setRetainInstance(true)的Fragment在Configuration Changes的时候不会销毁
 ```
+
 * `Presenter`、`Model`和`View`都通过接口进行交互，`Silute`封装了大部分Model-View-Presenter绑定的代码，使用起来非常简单
 * `Activity`的生命周期内回调`LifecycleDelegate`对应的方法，可以自己完成具体的实现类
 * `Presenter`拥有`Activity`的生命周期的方法，可以在`Activity`对应的生命周期内做相应的操作
@@ -19,11 +20,12 @@
 ##使用方法
 
 推荐的使用方法
-1.View层接口实现自IView，Presenter层接口实现自IPresenter
 
-2.Activity继承自抽象类SilBaseActivity，Fragment继承自SilBaseFragment，其中选择性重写的方法有：
+1.`View`层接口实现自`IView`，`Presenter`层接口实现自`IPresenter`
+
+2.`Activity`继承自抽象类`SilBaseActivity`，`Fragment`继承自`SilBaseFragment`，其中选择性重写的方法有：
 
 * createPresenterFactory：Presenter的工厂类，返回一个BasePresenterFactory实例
 * getLoaderId：返回Loader的id，一个id对应一个Loader
 
-3.Presenter继承BasePresenter实现Presenter层接口，Activity实现View层接口，BasePresenter和factory里面保存的是Activity的弱引用
+3.`Presenter`继承`BasePresenter`实现`Presenter`层接口，`Activity`实现`View`层接口，`BasePresenter`和`factory`里面保存的是`Activity`的弱引用
