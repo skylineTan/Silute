@@ -21,7 +21,7 @@
 
 推荐的使用方法
 
-1.`View`层接口实现自`IView`，`Presenter`层接口实现自`IPresenter`
+1.`View`层接口继承自`IView`，`Presenter`层接口继承自`IPresenter`
 
 2.`Activity`继承自抽象类`SilBaseActivity`，`Fragment`继承自`SilBaseFragment`，其中选择性重写的方法有：
 
