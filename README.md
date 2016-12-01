@@ -35,3 +35,20 @@ compile 'com.skylinetan.silute:silute:1.0.0'
 * getLoaderId：返回`Loader`的`id`，一个`id`对应一个`Loader`
 
 3.`Presenter`继承`BasePresenter`实现`Presenter`层接口，`Activity`实现`View`层接口，`BasePresenter`和`factory`里面保存的是`Activity`的弱引用
+
+License
+=======
+
+    Copyright 2016 skylineTan
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
